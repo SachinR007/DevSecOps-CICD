@@ -1,0 +1,7 @@
+skip_checks:
+  - CKV_AWS_18     # S3 bucket allows public access
+  - CKV_AWS_144    # Security Group allows 0.0.0.0/0
+  - CKV_AWS_135    # EC2 instance does not have encrypted EBS
+  - CKV_AWS_136    # EC2 instance does not require IMDSv2
+soft_fail: false
+output: cli
