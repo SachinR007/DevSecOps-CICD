@@ -52,3 +52,8 @@ jobs:
         run: |
           chmod +x cloudsploit_scan.sh
           ./cloudsploit_scan.sh
+
+      - name: Terraform Destroy - Cleanup
+        if: always()
+        working-directory: terraform
+        run: terraform destroy -auto-approve
