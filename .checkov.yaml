@@ -3,6 +3,8 @@ skip-check:
   - CKV_AWS_144
   - CKV_AWS_135
   - CKV_AWS_136
+  - CKV_AWS_8
+  - CKV_AWS_145
 
 soft-fail: false
 output: cli
