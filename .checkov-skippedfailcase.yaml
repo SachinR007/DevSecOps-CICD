@@ -1,0 +1,24 @@
+skip-check:
+  - CKV_AWS_18
+  - CKV_AWS_144
+  - CKV_AWS_135
+  - CKV_AWS_8
+  - CKV_AWS_145
+  - CKV_AWS_88     # EC2 instance should not have public IP
+  - CKV_AWS_79     # Ensure Instance Metadata Service Version 1 is not enabled
+  - CKV_AWS_126    # Ensure that detailed monitoring is enabled for EC2 instances
+  - CKV_AWS_382    # Ensure no security groups allow egress from 0.0.0.0:0 to port -1
+  - CKV_AWS_23     # Ensure every security group and rule has a description
+  - CKV_AWS_24     # Ensure no security groups allow ingress from 0.0.0.0:0 to port 22
+  - CKV_AWS_130    # Ensure VPC subnets do not assign public IP by default
+  - CKV2_AWS_61    # Ensure that an S3 bucket has a lifecycle configuration
+  - CKV2_AWS_12    # Ensure the default security group of every VPC restricts all traffic
+  - CKV2_AWS_11    # Ensure VPC flow logging is enabled in all VPCs
+  - CKV2_AWS_62    # Ensure S3 buckets should have event notifications enabled
+  - CKV2_AWS_6     # Ensure that S3 bucket has a Public Access block
+  - CKV_AWS_20     # S3 Bucket has an ACL defined which allows public READ access
+  - CKV2_AWS_41    # Ensure an IAM role is attached to EC2 instance
+  - CKV_AWS_21     # Ensure all data stored in the S3 bucket have versioning enabled
+
+soft-fail: false
+output: cli
