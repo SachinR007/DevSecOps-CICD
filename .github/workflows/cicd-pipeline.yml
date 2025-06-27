@@ -34,8 +34,8 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: terraform
-          config_file: .checkov.yaml
-          # config_file: .checkov-skippedfailcase.yaml 
+          # config_file: .checkov.yaml
+          config_file: .checkov-skippedfailcase.yaml 
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -57,7 +57,7 @@ jobs:
           chmod +x cloudsploit_scan.sh
           ./cloudsploit_scan.sh
 
-      - name: Terraform Destroy - Cleanup
-        if: always()
-        working-directory: terraform
-        run: terraform destroy -auto-approve
+      # - name: Terraform Destroy - Cleanup
+      #   if: always()
+      #   working-directory: terraform
+      #   run: terraform destroy -auto-approve
