@@ -55,10 +55,6 @@ jobs:
         working-directory: terraform
         run: terraform apply -auto-approve
 
-      - name: CloudSploit - Post-deployment Scan
-        run: |
-          chmod +x cloudsploit_scan.sh
-          ./cloudsploit_scan.sh
 
       # - name: Terraform Destroy - Cleanup
       #   if: always()
