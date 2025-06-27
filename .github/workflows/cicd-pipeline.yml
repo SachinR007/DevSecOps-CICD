@@ -25,7 +25,10 @@ jobs:
 
       - name: Terraform Init
         working-directory: terraform
-        run: terraform init
+        run: terraform init -backend-config="bucket=devsecops-tf-state-bucket" \
+                      -backend-config="key=env/devsecops/terraform.tfstate" \
+                      -backend-config="region=us-east-1"
+
 
       - name: Checkov - Pre-deployment scan
         uses: bridgecrewio/checkov-action@master
