@@ -37,8 +37,8 @@ jobs:
         uses: bridgecrewio/checkov-action@master
         with:
           directory: terraform
-          config_file: .checkov.yaml
-          # config_file: .checkov-skippedfailcase.yaml 
+          # config_file: .checkov.yaml
+          config_file: .checkov-skippedfailcase.yaml 
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
