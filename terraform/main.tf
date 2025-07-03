@@ -6,7 +6,7 @@ resource "aws_instance" "bad_example" {
   associate_public_ip_address = true
 
   tags = {
-    Name = "Test-instance-demo"
+    Name = "Test-demo-instance"
   }
 }
 
